@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Posh</title>
+    <style>
+        /* Tailwind CSS classes used for responsive design */
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        /* Additional custom styles */
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6;
+          }
+
+        /* Header styles */
+        .header {
+            background-color: #A020F0; 
+            color: #ffffff; 
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Main container styles */
+        .container {
+            max-width: 80%; /* Adjusted for responsiveness */
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Grid styles */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Card styles */
+        .card {
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            color: #ffffff;
+            font-size: 1.25rem;
+        }
+
+        .card-deposit {
+            background-color: #48baff; 
+        }
+
+        .card-withdraw {
+            background-color: #32cd32; 
+        }
+
+        .card-balance {
+            background-color: #3b82f6; 
+        }
+
+        /* Input and button styles */
+        .input-field {
+            width: calc(100% - 1rem);
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            background-color: #A020F0; 
+            color: #ffffff;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 1.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #48baff; 
+        }
+        /* Footer styles */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #A020F0; 
+            color: #ffffff; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="text-5xl">Balance<span class="font-medium"> Form</span></h1>
+    </header>
+    <main class="container">
+        <!-- Balance and transaction summary -->
+        <section class="grid">
+            <div class="card card-deposit">
+                <h4 class="text-xl">Deposit</h4>
+                <h2 class="text-xl font-medium">$ <span id="deposit-total">00</span></h2>
+            </div>
+            <div class="card card-withdraw">
+                <h4 class="text-xl">Withdraw</h4>
+                <h2 class="text-xl font-medium">$ <span id="withdraw-total">00</span></h2>
+            </div>
+            <div class="card card-balance">
+                <h4 class="text-xl">Balance</h4>
+                <h2 class="text-xl font-medium">$ <span id="balance-total">20000000</span></h2>
+            </div>
+        </section>
+        <!-- Deposit and withdraw sections -->
+        <section class="grid">
+            <div class="card card-deposit">
+                <h3 class="text-xl mb-4">Cash Deposit</h3>
+                <input id="deposit-field" class="input-field" type="text" placeholder="$ Cash Deposit Amount">
+                <br>
+                <button id="btn-deposit" class="btn mt-2">Deposit</button>
+            </div>
+            <div class="card card-withdraw">
+                <h3 class="text-xl mb-4">Cash Withdraw</h3>
+                <input id="withdraw-field" class="input-field" type="text" placeholder="$ Cash Withdraw Amount">
+                <br>
+                <button id="btn-withdraw" class="btn mt-2">Withdraw</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h3 class="text-xl">Thank <span class="font-medium">You</span></h3>
+    </footer>
+
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
+</body>
+</html>

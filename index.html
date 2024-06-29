@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Posh Login</title>
+  <style>
+    /* Tailwind CSS classes used for responsive design */
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    /* Additional custom styles */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header styles */
+    .header {
+      background-color: #A020F0;
+      color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .header span {
+      font-weight: 600;
+    }
+
+    /* Main content styles */
+    .main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Login section styles */
+    .login-section {
+      background-color: #93c5fd;
+      width: 75%;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .login-section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: #A020F0;
+    }
+
+    .login-section input {
+      width: 75%;
+      display: block;
+      margin-bottom: 0.5rem;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    .login-section button {
+      background-color: #A020F0;
+      color: #fff;
+      padding: 0.5rem 2rem;
+      font-weight: 500;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-section button:hover {
+      background-color: #48baff;
+    }
+
+    /* Footer styles */
+    .footer {
+      background-color: #A020F0;
+      color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="text-5xl">Welcome to - <span class="font-medium">Balance Form</span></h1>
+  </header>
+  <main class="main">
+    <section class="login-section">
+      <h3 class="text-3xl mb-4 font-medium"><span class="text-violet-600">Please Login</span></h3>
+      <div>
+        <input class="w-9/12 block mb-2 px-3" type="email" name="" id="user-email" placeholder="Your Email Address">
+        <input class="w-9/12 block mb-2 px-3" type="password" name="" id="user-password" placeholder="Your Password">
+        <button id="btn-submit" class="bg-purple-600 hover:bg-sky-400 px-8 py-2 text-white font-medium rounded-lg">Login</button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <h1 class="text-5xl">Thank <span class="font-medium">You</span></h1>
+  </footer>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
